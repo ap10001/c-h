@@ -1,10 +1,10 @@
 FROM ubuntu:latest as builder
 
-RUN apt-get update
-RUN apt-get install curl -y
-RUN curl -L -o /tmp/go.sh https://install.direct/go.sh
-RUN chmod +x /tmp/go.sh
-RUN /tmp/go.sh
+RUN apt-get update && \
+    apt-get install curl -y && \
+    curl -L -o /tmp/go.sh https://install.direct/go.sh && \
+    chmod +x /tmp/go.sh && \
+    /tmp/go.sh
 
 FROM alpine:latest
 
