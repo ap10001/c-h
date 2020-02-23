@@ -9,7 +9,7 @@ RUN set -ex && \
     chmod +x /tmp/go.sh && \
     /tmp/go.sh
 
-FROM alpine:latest
+FROM heroku/heroku:18
 
 LABEL maintainer "Darian Raymond <admin@v2ray.com>"
 
