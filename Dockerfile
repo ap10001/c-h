@@ -20,8 +20,8 @@ COPY --from=builder /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/
 COPY server_config.json /etc/v2ray/config.json
 
 RUN set -ex && \
-    sed -i "s/8888/$PORT/g" /etc/v2ray/config.json && \
-    sed -i "s/UUID/$UUID/g" /etc/v2ray/config.json && \
+    sed -i "s/8888/${PORT}/g" /etc/v2ray/config.json && \
+    sed -i "s/UUID/${UUID}/g" /etc/v2ray/config.json && \
     cat /etc/v2ray/config.json && \
     apk --no-cache add ca-certificates && \
     mkdir /var/log/v2ray/ &&\
