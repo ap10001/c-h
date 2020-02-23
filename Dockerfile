@@ -1,5 +1,7 @@
 FROM ubuntu:latest as builder
 
+# RUN echo $()
+
 RUN set -ex && \
     apt-get update && \
     apt-get install curl -y && \
