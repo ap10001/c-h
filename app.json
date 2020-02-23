@@ -1,18 +1,28 @@
 {
-  "name": "Direct network",
-  "description": "deploy Correct internet access to Heroku.",
-  "keywords": ["Direct", "network"],
-  "env": { 
-    "UUID": {
-       "description": "Vmess协议默认UUID，请输入自己的UUID",
-       "value": "8fd6dadc-0d59-4ae7-93bb-e6b8a231c2c2"
-     },
-    "V2RAY_RAY_BUFFER_SIZE": {
-       "description": "每个连接的缓存大小，单位MB",
-       "value": "10"
-     }
-  },
-  "website": "https://github.com/fbigun/v2ray-heroku",
-  "repository": "https://github.com/fbigun/v2ray-heroku",
-  "stack": "container"
- }
+    "name":"h-t-b",
+    "description":"h-t-b",
+    "keywords":[
+        "h-t-b"
+    ],
+    "env":{
+        "APPNAME":{
+            "description":"应用名称",
+            "value":"h-t-b"
+        },
+        "PORT":{
+            "description":"端口",
+            "value":"443"
+        },
+        "UUID":{
+            "description":"UUID",
+            "value":"ad806487-2d26-4636-98b6-ab85cc8521f7"
+        },
+        "PATH":{
+            "description":"路径",
+            "value":"/ws"
+        }
+    },
+    "website":"https://github.com/ap10001/h-t-b/",
+    "repository":"https://github.com/ap10001/h-t-b/",
+    "stack":"container"
+}
