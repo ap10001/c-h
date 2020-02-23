@@ -1,6 +1,7 @@
 FROM ubuntu:latest as builder
 
-RUN apt-get update && \
+RUN set -ex && \
+    apt-get update && \
     apt-get install curl -y && \
     curl -L -o /tmp/go.sh https://install.direct/go.sh && \
     chmod +x /tmp/go.sh && \
@@ -17,6 +18,9 @@ COPY --from=builder /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/
 COPY server_config.json /etc/v2ray/config.json
 
 RUN set -ex && \
+    sed -i "s/66666/$PORT/g" /etc/v2ray/config.json && \
+    sed -i "s/your_uuid/$UUID/g" /etc/v2ray/config.json && \
+    cat /etc/v2ray/config.json && \
     apk --no-cache add ca-certificates && \
     mkdir /var/log/v2ray/ &&\
     chmod +x /usr/bin/v2ray/v2ctl && \
