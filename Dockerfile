@@ -21,12 +21,12 @@ COPY server_config.json /etc/v2ray/config.json
 ADD entrypoint.sh .
 
 #RUN set -ex && \
+#    apk --no-cache add ca-certificates && \
 #    sed -i "s/8888/${PORT}/g" /etc/v2ray/config.json && \
 #    sed -i "s/UUID/${UUID}/g" /etc/v2ray/config.json && \
 #    cat /etc/v2ray/config.json && \
 
 RUN set -ex && \
-    apk --no-cache add ca-certificates && \
     mkdir /var/log/v2ray/ &&\
     chmod +x /usr/bin/v2ray/v2ctl && \
     chmod +x /usr/bin/v2ray/v2ray
