@@ -1,0 +1,19 @@
+{
+  "name": "Direct network",
+  "description": "deploy Correct internet access to Heroku.",
+  "keywords": ["Direct", "network"],
+  "env": { 
+    "UUID": {
+       "description": "Vmess协议默认UUID，请输入自己的UUID",
+       "value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
+     },
+    "V2RAY_RAY_BUFFER_SIZE": {
+       "description": "每个连接的缓存大小，单位MB",
+       "value": "10"
+     }
+  },
+  "website": "https://github.com/fbigun/v2ray-heroku",
+  "repository": "https://github.com/fbigun/v2ray-heroku",
+  "stack": "container"
+ }
+ 
