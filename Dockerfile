@@ -14,7 +14,8 @@ RUN set -ex && \
 # COPY --from=download /usr/bin/v2ray/geoip.dat /usr/bin/v2ray/
 # COPY --from=download /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/
 # COPY server_config.json /etc/v2ray/config.json
-# ADD entrypoint.sh .
+
+ADD entrypoint.sh .
 
 # RUN set -ex && \
 #     mkdir /var/log/v2ray/ &&\
