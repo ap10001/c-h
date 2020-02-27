@@ -4,9 +4,10 @@ FROM heroku/heroku:18
 
 LABEL maintainer 'xxx <xxx@xxx.com>'
 
-RUN VERSION=$(curl --silent 'https://api.github.com/repos/txthinking/brook/releases/latest' | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') && \
+RUN set -ex && \
+    VERSION=$(curl --silent 'https://api.github.com/repos/txthinking/brook/releases/latest' | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/') && \
     echo "Got latest version = ${VERSION}" && \
-    echo $(curl -Lo brook https://github.com/txthinking/brook/releases/download/${VERSION}/brook)
+    curl -Lo brook https://github.com/txthinking/brook/releases/download/${VERSION}/brook
     
 # ENV PATH /usr/bin/v2ray:$PATH
 # COPY --from=download /usr/bin/v2ray/v2ray /usr/bin/v2ray/
