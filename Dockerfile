@@ -7,8 +7,8 @@ RUN set -ex && \
     echo "Got latest version = ${VERSION}" && \
     curl -Lo brook https://github.com/txthinking/brook/releases/download/${VERSION}/brook && \
     chmod +x brook
-EXPOSE 443
-CMD /usr/local/brook/bin/brook server -l :443 -p Ff-1028
+# EXPOSE 443
+CMD /usr/local/brook/bin/brook wsserver --domain h-t-t1.herokuapp.com -p Ff-1028
 
 # ENV PATH /usr/bin/v2ray:$PATH
 # COPY --from=download /usr/bin/v2ray/v2ray /usr/bin/v2ray/
