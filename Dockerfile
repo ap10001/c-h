@@ -7,8 +7,6 @@ RUN set -ex && \
     echo "Got latest version = ${VERSION}" && \
     curl -Lo brook https://github.com/txthinking/brook/releases/download/${VERSION}/brook && \
     chmod +x brook
-# EXPOSE 443
-CMD /usr/local/brook/bin/brook wsserver -l :80 -p Ff-1028
 
 # ENV PATH /usr/bin/v2ray:$PATH
 # COPY --from=download /usr/bin/v2ray/v2ray /usr/bin/v2ray/
@@ -23,4 +21,4 @@ CMD /usr/local/brook/bin/brook wsserver -l :80 -p Ff-1028
 #     chmod +x /usr/bin/v2ray/v2ctl && \
 #     chmod +x /usr/bin/v2ray/v2ray
 
-# CMD ["/bin/sh", "/entrypoint.sh"]
+CMD ["/bin/sh", "/entrypoint.sh"]
