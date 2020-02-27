@@ -22,4 +22,4 @@ ADD entrypoint.sh .
 #     chmod +x /usr/bin/v2ray/v2ctl && \
 #     chmod +x /usr/bin/v2ray/v2ray
 
-CMD ["/bin/sh", "/entrypoint.sh"]
+# CMD ["/bin/sh", "/entrypoint.sh"]
