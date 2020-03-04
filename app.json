@@ -1,10 +1,10 @@
 {
-  "name": "chisel-heroku",
-  "description": "将CHISEL作为SOCKS5代理部署到Heroku。",
-  "keywords": ["chisel", "heroku"],
+  "name": "c-h",
+  "description": "c-h",
+  "keywords": ["c", "h"],
   "env": { 
-    "CHISEL_AUTH": {
-      "description": "CHISEL的--auth选项，形式为<user：pass>。",
+    "C_H_AUTH": {
+      "description": "C-H的--auth选项，形式为<user：pass>。",
       "value": "user:pass"
     }
   },
