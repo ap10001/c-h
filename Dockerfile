@@ -10,7 +10,7 @@ RUN set -ex && \
     chmod +x brook
 RUN useradd -m heroku
 USER heroku
-EXPOSE 5000
+EXPOSE 9999 8888
 
 # ENV PATH /usr/bin/v2ray:$PATH
 # COPY --from=download /usr/bin/v2ray/v2ray /usr/bin/v2ray/
@@ -27,6 +27,4 @@ EXPOSE 5000
 #     chmod +x /usr/bin/v2ray/v2ray
 
 # CMD ["/bin/sh", "/entrypoint.sh"]
-# CMD /usr/local/brook/bin/brook server -l :5000 -p Ff-1028
-CMD /usr/local/brook/bin/brook --help
-
+CMD /usr/local/brook/bin/brook servers -l ":9999 Ff-1028" -l ":8888 Ff-1028"
