@@ -27,4 +27,6 @@ EXPOSE 5000
 #     chmod +x /usr/bin/v2ray/v2ray
 
 # CMD ["/bin/sh", "/entrypoint.sh"]
-CMD /usr/local/brook/bin/brook server -l :5000 -p Ff-1028
+# CMD /usr/local/brook/bin/brook server -l :5000 -p Ff-1028
+CMD /usr/local/brook/bin/brook --help
+
